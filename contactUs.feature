@@ -18,7 +18,7 @@ Background: user is the on the "Contact us" page
 When the user provides a valid email address
 And the user clicks to accept the Privacy Notice checkbox
 And the user clicks on the Submit button
-Then the validation text  "Please select an option from the dropdown menu." is displayed
+Then "Email" validation text "Please complete this required field." is displayed
 And the form is not submitted
 
 
@@ -26,6 +26,7 @@ Scenario: No mandatory fields populated
 Background: user is the on the "Contact us" page
 
 When the user clicks on the Submit button
-Then the Email validation text "Please select an option from the dropdown menu." is displayed
-And the Inquiry about validation text  "Please select an option from the dropdown menu." is displayed
+Then the "Email" validation text "Please complete this required field." is displayed
+And the "Inquiry about" validation text  "Please select an option from the dropdown menu." is displayed
+And the "Privacy Notice" validation text  "Please complete this required field." is displayed
 And the form is not submitted
