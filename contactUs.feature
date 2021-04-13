@@ -3,23 +3,23 @@ Feature: Customers should be able to get in contact with Somo, using a simple fo
 Scenario: All mandatory fields with valid data populated
 Background: User is on the "Contact us" page
 When the user provides a valid email address
-And the user selects an Enquiry About option
-And the user clicks to accept the Privacy Notice checkbox
-And the user clicks on the Submit button
-Then the user is given the submit confirmation 
+And the user selects an "Enquiry About" option
+And the user clicks to accept the "Privacy Notice" checkbox
+And the user clicks on the "Submit Button"
+Then the user is given the "Submit Confirmation"
 And the text "Thanks for submitting the form. We'll be in touch soon." is displayed
 
 Scenario: Partial mandatory fields with valid data populated
 Background: User is on the "Contact us" page
 When the user provides a valid email address
-And the user clicks to accept the Privacy Notice checkbox
-And the user clicks on the Submit button
+And the user clicks to accept the "Privacy Notice" checkbox
+And the user clicks on the "Submit Button"
 Then the "Email" validation text "Please complete this required field." is displayed
 And the form is not submitted
 
 Scenario: No mandatory fields populated 
 Background: User is on the "Contact us" page
-When the user clicks on the Submit button
+When the user clicks on the "Submit Button"
 Then the "Email" validation text "Please complete this required field." is displayed
 And the "Enquiry About" validation text "Please select an option from the dropdown menu." is displayed
 And the "Privacy Notice" validation text "Please complete this required field." is displayed
