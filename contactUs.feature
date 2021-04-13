@@ -10,7 +10,7 @@ Then the user is given the submit confirmation
 And the text "Thanks for submitting the form. We'll be in touch soon." is displayed
 
 Scenario: Partial mandatory fields with valid data populated
-Background: User is the "Contact us" page
+Background: User is on the "Contact us" page
 When the user provides a valid email address
 And the user clicks to accept the Privacy Notice checkbox
 And the user clicks on the Submit button
@@ -18,7 +18,7 @@ Then the "Email" validation text "Please complete this required field." is displ
 And the form is not submitted
 
 Scenario: No mandatory fields populated 
-Background: user is the on the "Contact us" page
+Background: User is on the "Contact us" page
 When the user clicks on the Submit button
 Then the "Email" validation text "Please complete this required field." is displayed
 And the "Enquiry About" validation text "Please select an option from the dropdown menu." is displayed
